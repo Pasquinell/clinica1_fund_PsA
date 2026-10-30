@@ -154,25 +154,46 @@ node doc/tools/cdp.mjs "file://$PWD/index.html" mob 390 844 "b10:16500"
 ```
 (`cdp.mjs` necesita Node ≥ 22 y `google-chrome`; el formato de cada argumento es `idDeSección:desplazamientoEnPx`.)
 
-## 9. Publicación en GitHub Pages (pendiente al cerrar la sesión)
+## 9. Publicación en GitHub Pages
 
-1. Renombrar la carpeta: `mv ~/Projects/sandbox/C1 ~/Projects/sandbox/clinica1_fund_PsA`.
-2. Decidir si se publican los dos `.md` de material. Si no:
-   `printf '%s\n' "Guía General*.md" "Preguntas de Preparación*.md" > .gitignore`
-3. Crear el repo vacío `clinica1_fund_PsA` en la cuenta **Pasquinell** (público, sin README).
-4. En la carpeta:
-   ```bash
-   git init -b main
-   git config user.name "Pasquinell"
-   git config user.email "TU_EMAIL_PERSONAL"
-   git add . && git status && git commit -m "Material didáctico Clínica I"
-   git remote add origin https://Pasquinell@github.com/Pasquinell/clinica1_fund_PsA.git
-   git push -u origin main      # contraseña = token personal fine-grained (Contents: read & write)
-   ```
-   Alternativa SSH con clave propia: `git config core.sshCommand "ssh -i ~/.ssh/id_pasquinell -o IdentitiesOnly=yes"` y remoto `git@github.com:Pasquinell/clinica1_fund_PsA.git`.
-5. Repo → Settings → Pages → *Deploy from a branch* → `main` / `(root)`.
+Publicado en `https://pasquinell.github.io/clinica1_fund_PsA/` (repo `Pasquinell/clinica1_fund_PsA`, Pages desde `main` / `(root)`).
 
-Nota: `doc/` y `prompt_tcc.md` también quedan públicos si se suben. Si no se quiere, agregarlos al `.gitignore`.
+Configuración de la máquina (ya hecha, no tocar):
+
+- `~/.ssh/config`: `Host github.com` usa `~/.ssh/id_ed25519_dynamicdata` (cuenta de trabajo **pasqui-dynamicdata**, organización `Dynamic-Data-Agency`). Es el **default**.
+- `Host github-pasquinell` → `github.com` con `~/.ssh/id_ed25519_pasquinell` (cuenta personal **Pasquinell**).
+- Git global: `pasqui-dynamicdata <pasqui@dynamicdata.agency>`, más un `includeIf "hasconfig:remote.*.url:git@github-pasquinell:**/**"` que carga `~/.gitconfig-pasquinell` (`Pasquinell <purbanir@gmail.com>`) en cualquier repo con remoto personal.
+
+Por eso el remoto de este repo es:
+
+```bash
+git remote -v    # origin  git@github-pasquinell:Pasquinell/clinica1_fund_PsA.git
+```
+
+**No** usar `git@github.com:Pasquinell/...` ni HTTPS con token: entran con la cuenta de trabajo o fallan.
+
+Actualizar el sitio:
+
+```bash
+git add . && git commit -m "..." && git push
+```
+
+Pages se actualiza solo en 1-2 minutos.
+
+Proyecto nuevo personal (mismo esquema):
+
+```bash
+git init -b main
+git remote add origin git@github-pasquinell:Pasquinell/<repo>.git
+git config user.email          # debe mostrar purbanir@gmail.com antes de commitear
+git add . && git commit -m "..." && git push -u origin main
+```
+
+(Crear antes el repo vacío en github.com logueado como Pasquinell.)
+
+Comprobar cuentas: `ssh -T git@github.com` → «Hi pasqui-dynamicdata!»; `ssh -T git@github-pasquinell` → «Hi Pasquinell!».
+
+Nota: `doc/` y `prompt_tcc.md` quedan públicos si se suben. Para excluirlos, agregarlos al `.gitignore`.
 
 ## 10. Pendientes y límites conocidos
 
