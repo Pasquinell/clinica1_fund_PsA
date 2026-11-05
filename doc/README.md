@@ -21,7 +21,6 @@ Se publica como sitio estático en GitHub Pages: `https://pasquinell.github.io/c
 | `doc/README.md` | Este archivo. |
 | `doc/tools/cdp.mjs` | Script Node que abre Chrome headless, scrollea de verdad y saca capturas (para probar el scrollytelling). |
 | `doc/tools/figs_preview.py` | Genera páginas con todos los diagramas en su estado final, para revisar solapamientos. |
-Material de entrada (resumen extenso). No hace falta para la página. Decidir si se publica. |
 
 
 Durante la construcción el HTML se armó concatenando 8 partes en un directorio temporal; esas partes **ya no existen**. Desde ahora se edita `index.html` directamente.
