@@ -33,7 +33,7 @@ Durante la construcción el HTML se armó concatenando 8 partes en un directorio
 - Parcial 1: de «¿Qué es el psicoanálisis?» a «Primera teoría pulsional». Parcial 2: de «Síntoma» a «Relación entre pulsión y cultura».
 - Traducción Amorrortu (Etcheverry): pulsión, investidura, sepultamiento, etc.
 - No confiar 100 % en los `.md` provistos; las Conferencias 17, 18, 19 y 23 debían tratarse con más profundidad.
-- El diagrama de la Conf. 23 (series complementarias / formación de síntoma) como modelo de buen diagrama.
+- El diagrama de la Conf. 23 (series complementarias / formación de síntoma) como modelo de buen diagrama. Fuente: video del canal de YouTube *Lo inconsciente* (ver § 5), no la cátedra.
 - Sin datos inventados: basarse en los textos o en búsqueda web.
 - **Temporalidad estricta:** no usar conceptos posteriores (p. ej. segunda tópica) en textos anteriores; si se mencionan, marcarlos como anticipación.
 - Muy pedagógico: qué dice Freud, de qué observación o caso sale, en qué contexto escribía, repasos y recontextualizaciones.
@@ -93,7 +93,7 @@ Temporalidad (anticipaciones marcadas en el texto):
 - Sin «sistema Icc» en 1895 (grupo psíquico separado, defensa).
 - Edipo: Carta 71, no 69.
 - Principio de placer / de realidad: 1911 (en 1900, «principio de displacer»).
-- Organizaciones pregenitales oral y sádico-anal: agregado de 1915 a los *Tres ensayos*; **fase fálica: 1923**. El diagrama de la Conf. 23 de la cátedra rotula «etapa fálica»: se conservó con un asterisco y un aviso de anacronismo.
+- Organizaciones pregenitales oral y sádico-anal: agregado de 1915 a los *Tres ensayos*; **fase fálica: 1923**. El diagrama de la Conf. 23, tomado del video [«Conferencia 23. Los caminos de la formación de síntoma. Sigmund Freud»](https://www.youtube.com/watch?v=4akbGVw21t4) del canal de YouTube *Lo inconsciente* (no es material de la cátedra), rotula «etapa fálica»: se conservó con un asterisco y un aviso de anacronismo.
 - Narcisismo 1914; ello/yo/superyó 1923; pulsión de muerte 1920; angustia señal 1926; masoquismo primario 1924.
 - El «yo» de 1906-1917 no es la instancia de 1923.
 
