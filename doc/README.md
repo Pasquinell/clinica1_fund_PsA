@@ -58,6 +58,7 @@ Orden exacto de la tabla de la cátedra (23 bloques, ids `b1`…`b23`):
 - Tema 4 · Represión, primera angustia: `b14` *La represión* (1915), `b15` Conf. 25 (1916-17).
 - Tema 4 · Inconsciente: `b16` *Lo inconciente* (1915).
 - Repaso integral del Parcial 2: `r5` (movido detrás de `b16`).
+- Mapa conceptual del Parcial 2: `#mapa2`, después de `r5`. Scrolly de 8 pasos (svg `.cmap`, viewBox 640×480, 13 nodos `.cm-n` con `data-k`/`data-n` vecinos/`data-l` bloques/`data-d` descripción; aristas `.cm-e` con `data-a`/`data-b`). En el último paso, clic o Enter sobre un nodo resalta sus conexiones y llena `.cmap-info` (oculto en móvil). Debajo, `details.fold` con el mapa en texto y tres recorridos de parcial. El JS va en un `<script>` propio al final del `<body>`.
 
 **Fuera de parciales** (`data-parcial="3"`, color `--p3`; divisor `#fuera` y encabezado `#tema4b`)
 - Tema 4 · Narcisismo: `b17` *Introducción del narcisismo* (1914) + Conf. 26.
