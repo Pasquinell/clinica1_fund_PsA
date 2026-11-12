@@ -20,13 +20,13 @@ node doc/tools/cdp.mjs "file://$PWD/index.html" doc/tools/out/shot 1400 900 "b10
 node doc/tools/cdp.mjs "file://$PWD/index.html" doc/tools/out/mob 390 844 "b10:16500"               # mobile, no horizontal overflow allowed
 ```
 
-There is no `check.py` here. To check tag balance, `data-s` vs step count, duplicate ids, broken `#links` and missing images, copy `../tcc_terapia/doc/tools/check.py` into `doc/tools/` and run `python3 -I doc/tools/check.py`.
+`python3 -I doc/tools/check.py` checks tag balance, `data-s` vs step count, duplicate ids, broken `#links` and missing images (copied from `../tcc_terapia`).
 
 ## Differences from the sibling sites
 
 - **Step activation uses `IntersectionObserver` rootMargin bands**, not the "last card above 58 %" computation that the parent CLAUDE.md describes. Desktop band is `-42% 0px -42% 0px`, mobile (≤ 900 px) is `-66% 0px -22% 0px`. Section tracking for the top bar uses `-38% 0px -58% 0px`. See the script near the end of `index.html` (around line 2715).
 - Only `data-s` exists. There is no `data-off`/`.fade` and no `data-show`.
-- Grouping attributes are `data-parcial` + `data-tema`. Sections also carry `data-year`. The top bar is a 1890–1935 ruler that shows "↩ retrocede N años" / "→ avanza N años" when the syllabus jumps in time.
+- Grouping attributes are `data-parcial` (`0` general, `1`, `2`, `3` = fuera de parciales: b17–b23) + `data-tema`. Sections also carry `data-year`. The top bar is a 1890–1935 ruler that shows "↩ retrocede N años" / "→ avanza N años" when the syllabus jumps in time.
 - SVG vocabulary: boxes `.box .boxs .bt .bo .bc .bp .bb`, lines `.ln .lnd .lo .lt .lc .lp .lb`, text `.ti .sm .xs .ser`, markers `#ar #aro #art #arc #arp #arb`. Callout classes: `.call ant` (Anticipación), `.call rec` (Recontextualización), `.call caso`, `.call nota`, `.call warn` (Trampa).
 - `b10` (Conferencias 17, 18, 19, 23) has four sub-scrollies and is the reference for diagram quality.
 

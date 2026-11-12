@@ -21,6 +21,8 @@ Se publica como sitio estático en GitHub Pages: `https://pasquinell.github.io/c
 | `doc/README.md` | Este archivo. |
 | `doc/tools/cdp.mjs` | Script Node que abre Chrome headless, scrollea de verdad y saca capturas (para probar el scrollytelling). |
 | `doc/tools/figs_preview.py` | Genera páginas con todos los diagramas en su estado final, para revisar solapamientos. |
+| `doc/tools/check.py` | Chequeos estáticos (copiado de `tcc_terapia`): balance de etiquetas, `data-s` vs pasos, ids duplicados, `#enlaces` rotos, imágenes. |
+| `fuentes/` | Material de la cátedra y bibliografía con copyright (imagen de temas del 2.º parcial, guía de lectura de *La interpretación de los sueños*, muestra del *Diccionario* de Laplanche-Pontalis). **Ignorado por git; no publicar.** |
 
 
 Durante la construcción el HTML se armó concatenando 8 partes en un directorio temporal; esas partes **ya no existen**. Desde ahora se edita `index.html` directamente.
@@ -49,12 +51,15 @@ Orden exacto de la tabla de la cátedra (23 bloques, ids `b1`…`b23`):
 - Tema 2 · Sexualidad / cuerpo erógeno: `b7` *Mis tesis…* (1906), `b8` *Tres ensayos* II y III (1905).
 - Tema 2 · Primera teoría pulsional: `b9` *Pulsiones y destinos de pulsión* (1915).
 
-**Parcial 2**
+**Parcial 2** (según la lista de temas del 2.º parcial 2026, `fuentes/tesxtos_segundo_parcial.jpeg`)
 - Tema 3 · Síntoma: `b10` Conferencias 17, 18, 19 y 23 (1916-17), tratadas en profundidad con cuatro sub-scrollies.
-- Tema 3 · Formaciones de compromiso: `b11` *Interpretación de los sueños* VI A-B-C (1900), `b12` *Psicopatología de la vida cotidiana* I y II (1901).
+- Tema 3 · Formaciones del Icc / sueños: `b11` *Interpretación de los sueños* VI A-B-C (1900), `b12` *Psicopatología de la vida cotidiana* I y II (1901), `cs` *Conferencias de introducción* 7, 9, 11 y 14 (1916 [1915-16]; bloque agregado en nov. 2026, sin scrolly).
 - Tema 4 · Primera tópica: `b13` *Interpretación de los sueños* VI D, I y VII (1900).
 - Tema 4 · Represión, primera angustia: `b14` *La represión* (1915), `b15` Conf. 25 (1916-17).
 - Tema 4 · Inconsciente: `b16` *Lo inconciente* (1915).
+- Repaso integral del Parcial 2: `r5` (movido detrás de `b16`).
+
+**Fuera de parciales** (`data-parcial="3"`, color `--p3`; divisor `#fuera` y encabezado `#tema4b`)
 - Tema 4 · Narcisismo: `b17` *Introducción del narcisismo* (1914) + Conf. 26.
 - Tema 4 · Segunda teoría pulsional: `b18` *Más allá del principio de placer* II, III, VI, VII (1920).
 - Tema 4 · Segunda tópica: `b19` *El yo y el ello* (1923).
@@ -62,7 +67,7 @@ Orden exacto de la tabla de la cátedra (23 bloques, ids `b1`…`b23`):
 - Tema 4 · Segunda angustia: `b22` *Inhibición, síntoma y angustia* II, III, IV, VIII (1926) + *Nuevas conferencias* 31 y 32 (1933).
 - Tema 5 · Pulsión y cultura: `b23` *El malestar en la cultura* (1930).
 
-Secciones de apoyo: portada (`hero`), cómo usar, mapa del programa (tabla con enlaces), «Un programa que va y viene» (gráfico año × orden del programa), cuatro tesis + léxico Amorrortu con año de aparición de cada término, repasos `r1`…`r5`, «Cinco hilos» finales (`hilos`) y pie con fuentes.
+Secciones de apoyo: portada (`hero`), cómo usar, mapa del programa (tabla con enlaces; filas `p1`, `p2`, `p3`), «Un programa que va y viene» (gráfico año × orden del programa, con corte «Fuera →»), cuatro tesis + léxico Amorrortu con año de aparición de cada término, repasos `r1`…`r5`, «Cinco hilos» finales (`hilos`), **glosario** (`#glosario`) y pie con fuentes.
 
 ### Anatomía de cada bloque
 
@@ -73,6 +78,14 @@ Secciones de apoyo: portada (`hero`), cómo usar, mapa del programa (tabla con e
 5. **Freud en sus palabras**: citas con marca ⚑ (literalidad confiable) o ≈ (fiel al sentido; verificar antes de entrecomillar).
 6. **Trampas de examen**.
 7. **Pregunta** con respuesta modelo desplegable (`<details>`).
+
+Complementos agregados en nov. 2026 (no reemplazan nada):
+
+- Al inicio de cada bloque, después del encabezado: `.lectura` con **Primera lectura** (resumen narrativo del texto, con sus ejemplos y hallazgos), `.nucleo` (**el texto en un párrafo**: qué introduce y cómo se relaciona) e `.ideas` (bullets).
+- Al final de cada bloque: `.desarrollo` con 3-4 **preguntas de desarrollo** (`details.preg.dev`) y respuesta ideal de parcial; el último párrafo (`p.clave`) dice qué evalúa la pregunta y el error típico.
+- `b11` y `b13`: `.desarrollo.guia` con las 48 preguntas de la **guía de lectura de la cátedra** sobre *La interpretación de los sueños* respondidas (1-11 en `b11`, 12-48 en `b13`).
+- **Preguntas integradoras** dentro de los repasos: `r2` (Tema 1), `r3` (Parcial 1), `r4` (Tema 3), `r5` (Parcial 2), `hilos` (fuera de parciales).
+- **Glosario** final basado en Laplanche y Pontalis. El PDF disponible es solo una muestra (pp. 23-44, entradas A): las entradas cotejadas con ella llevan ⚑; el resto (≈) son paráfrasis según el *Diccionario*, no cotejadas con el texto.
 
 Cifras: 23 bloques, 32 diagramas con scroll, 23 preguntas, ~20 anticipaciones, ~15 recontextualizaciones.
 
@@ -200,3 +213,8 @@ Nota: `doc/` y `prompt_tcc.md` quedan públicos si se suben. Para excluirlos, ag
 - Textos fuera de la bibliografía básica que se mencionan como contexto: *Sobre la iniciación del tratamiento* (1913), Conf. 21, 22 y 24, caps. IV-V de *Más allá*, *Duelo y melancolía*, *La organización genital infantil*. Se señalan cada vez.
 - Tamaño de letra de los diagramas en móvil: legible pero pequeño.
 - Las fuentes dependen de Google Fonts.
+- Glosario: cotejar las entradas ≈ contra el *Diccionario* completo de Laplanche-Pontalis.
+- Bloque `cs` (Conf. 7, 9, 11, 14): sin diagrama ni citas literales; los resúmenes son paráfrasis.
+- `b22`: el sitio ubica «inhibición ≠ síntoma» en el cap. II de *Inhibición, síntoma y angustia*; probablemente esté en el cap. I. Verificar en el tomo XX.
+- Ejemplos de los complementos (nov. 2026) citados de memoria, a cotejar: sueño de las entradas de teatro (Conf. 7), «servicios de amor» (Conf. 9), Silberer y Maury (IdS VI), el sueño de la madre con los picos de pájaro (VII-D), la paciente que desea ser besada (Estudios, cap. 4), el chiste del pastor y el agente de seguros (Puntualizaciones), el niño que dice ser el gatito (Masas VII), Tancredo y Clorinda (Más allá III).
+- Ortografía: «inconsciente» en la prosa; «inconciente» sólo en citas de Amorrortu y en el título *Lo inconciente*.
