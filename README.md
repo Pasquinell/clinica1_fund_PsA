@@ -2,7 +2,7 @@
 
 Material didáctico del curso **Clínica I: Fundamentos psicoanalíticos** — Facultad de Psicología, Universidad de la República (UDELAR), Uruguay, 2026.
 
-Recorrido por la bibliografía básica del curso (Freud, *Obras completas*, Amorrortu, trad. J. L. Etcheverry), en el orden de temas y tópicos de la cátedra, con diagramas que se arman con el scroll, casos clínicos, trampas de examen y preguntas con respuesta modelo. Cubre el Parcial 1 («¿Qué es el psicoanálisis?» a «Primera teoría pulsional») y el Parcial 2 («Síntoma» a «Relación entre pulsión y cultura»).
+Recorrido por la bibliografía básica del curso (Freud, *Obras completas*, Amorrortu, trad. J. L. Etcheverry), en el orden de temas y tópicos de la cátedra (salvo el Parcial 2, que se lee en orden cronológico), con diagramas que se arman con el scroll, casos clínicos, trampas de examen y preguntas con respuesta modelo. Cubre el Parcial 1 («¿Qué es el psicoanálisis?» a «Primera teoría pulsional») y el Parcial 2 («Síntoma» a «Relación entre pulsión y cultura»).
 
 **Ver online:** https://pasquinell.github.io/clinica1_fund_PsA/
 
