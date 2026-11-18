@@ -6,7 +6,7 @@ Registro de qué se construyó, con qué criterios, qué decisiones se tomaron y
 
 ## 1. Qué es
 
-Un sitio de una sola página (`index.html`) con un **scrollytelling** pedagógico sobre la bibliografía básica del curso **Clínica I: Fundamentos psicoanalíticos** (Facultad de Psicología, UDELAR, Uruguay, 2026). Se lee Freud en el **orden del programa de la cátedra** (tema → tópico → texto), no en orden cronológico, y los diagramas se arman a medida que se avanza.
+Un sitio de una sola página (`index.html`) con un **scrollytelling** pedagógico sobre la bibliografía básica del curso **Clínica I: Fundamentos psicoanalíticos** (Facultad de Psicología, UDELAR, Uruguay, 2026). El Parcial 1 y los textos fuera de parciales se leen en el **orden del programa de la cátedra** (tema → tópico → texto). El **Parcial 2 se lee en orden cronológico** (rama `parcial2-cronologico`, nov. 2026), en tres épocas. Los diagramas se arman a medida que se avanza.
 
 Se publica como sitio estático en GitHub Pages: `https://pasquinell.github.io/clinica1_fund_PsA/` (repo `Pasquinell/clinica1_fund_PsA`, rama `main`, raíz).
 
@@ -51,13 +51,14 @@ Orden exacto de la tabla de la cátedra (23 bloques, ids `b1`…`b23`):
 - Tema 2 · Sexualidad / cuerpo erógeno: `b7` *Mis tesis…* (1906), `b8` *Tres ensayos* II y III (1905).
 - Tema 2 · Primera teoría pulsional: `b9` *Pulsiones y destinos de pulsión* (1915).
 
-**Parcial 2** (según la lista de temas del 2.º parcial 2026, `fuentes/tesxtos_segundo_parcial.jpeg`)
-- Tema 3 · Síntoma: `b10` Conferencias 17, 18, 19 y 23 (1916-17), tratadas en profundidad con cuatro sub-scrollies.
-- Tema 3 · Formaciones del Icc / sueños: `b11` *Interpretación de los sueños* VI A-B-C (1900), `b12` *Psicopatología de la vida cotidiana* I y II (1901), `cs` *Conferencias de introducción* 7, 9, 11 y 14 (1916 [1915-16]; bloque agregado en nov. 2026, sin scrolly).
-- Tema 4 · Primera tópica: `b13` *Interpretación de los sueños* VI D, I y VII (1900).
-- Tema 4 · Represión, primera angustia: `b14` *La represión* (1915), `b15` Conf. 25 (1916-17).
-- Tema 4 · Inconsciente: `b16` *Lo inconciente* (1915).
-- Repaso integral del Parcial 2: `r5` (movido detrás de `b16`).
+**Parcial 2** (según la lista de temas del 2.º parcial 2026, `fuentes/tesxtos_segundo_parcial.jpeg`). Se presenta en **orden cronológico**, no en el del programa. Los ids y los números de bloque (`.bnum`) siguen siendo los del programa: el glosario, el mapa y `#mapa2` enlazan por id.
+- Época 1 · 1900-1901 (encabezado `#tema3`, reutiliza `header.tema-h`): `b11` *Interpretación de los sueños* VI A-B-C (1900, Tema 3), `b13` VI D, I y VII (1900, Tema 4 · Primera tópica), `b12` *Psicopatología de la vida cotidiana* I y II (1901, Tema 3).
+- Puente `call rec` 1900 → 1901 y 1901 → 1915.
+- Época 2 · 1915 (`#tema4`, con tarjetas `.rgrid` de lo que pasó entre 1905 y 1915): `b14` *La represión* (Tema 4), `b16` *Lo inconciente* (Tema 4).
+- Época 3 · 1915-1917 (`#epoca3`): `cs` Conferencias 7, 9, 11 y 14 (1916 [1915-16], Tema 3, sin scrolly), `b10` Conferencias 17, 18, 19 y 23 (1916-17, Tema 3, cuatro sub-scrollies), puente 23ª → 25ª, `b15` Conf. 25 (1916-17, Tema 4).
+- `r4` Repaso del Tema 3 (ahora al final, `data-year="1917"`), `r5` Repaso integral.
+- En el índice, `data-tema` de los bloques del Parcial 2 es la época, no el tema. Cada encabezado de época dice a qué tema del programa pertenece cada bloque. `#como-usar`, `#mapa` y `#vaivien` siguen describiendo el orden del programa y avisan que el Parcial 2 se lee cronológicamente.
+- `b13` ampliado (nov. 2026): en `.lectura`, «Por qué cambia la pregunta», el sueño del niño que arde con la lectura de Freud en tres pasos, Fechner en VII-B, y los dos inconscientes en VII-F. Se agregaron una «Nota · quién era Fechner» y una Anticipación (Fechner en 1920, Lacan y «la otra escena»).
 - Mapa conceptual del Parcial 2: `#mapa2`, después de `r5`. Scrolly de 8 pasos (svg `.cmap`, viewBox 640×480, 13 nodos `.cm-n` con `data-k`/`data-n` vecinos/`data-l` bloques/`data-d` descripción; aristas `.cm-e` con `data-a`/`data-b`). En el último paso, clic o Enter sobre un nodo resalta sus conexiones y llena `.cmap-info` (oculto en móvil). Debajo, `details.fold` con el mapa en texto y tres recorridos de parcial. El JS va en un `<script>` propio al final del `<body>`.
 
 **Fuera de parciales** (`data-parcial="3"`, color `--p3`; divisor `#fuera` y encabezado `#tema4b`)
@@ -218,4 +219,5 @@ Nota: `doc/` y `prompt_tcc.md` quedan públicos si se suben. Para excluirlos, ag
 - Bloque `cs` (Conf. 7, 9, 11, 14): sin diagrama ni citas literales; los resúmenes son paráfrasis.
 - `b22`: el sitio ubica «inhibición ≠ síntoma» en el cap. II de *Inhibición, síntoma y angustia*; probablemente esté en el cap. I. Verificar en el tomo XX.
 - Ejemplos de los complementos (nov. 2026) citados de memoria, a cotejar: sueño de las entradas de teatro (Conf. 7), «servicios de amor» (Conf. 9), Silberer y Maury (IdS VI), el sueño de la madre con los picos de pájaro (VII-D), la paciente que desea ser besada (Estudios, cap. 4), el chiste del pastor y el agente de seguros (Puntualizaciones), el niño que dice ser el gatito (Masas VII), Tancredo y Clorinda (Más allá III).
+- Datos del Parcial 2 cronológico verificados en la web (nov. 2026): el niño que arde (preámbulo del cap. VII, antes de A; texto en psychclassics.yorku.ca: paciente que lo oyó en una conferencia, el anciano, la vela, «paths lead into darkness», Freud vuelve al sueño en B y C), la cita de Fechner en el cap. I-E, y los doce ensayos metapsicológicos de 1915 (cinco publicados, el resto perdido; borrador hallado en 1983). Sin verificar contra el tomo (marcados ≈ o redactados con cautela): la redacción Amorrortu de la frase de Fechner; «poca repercusión» del libro de los sueños; los detalles del sueño de Maury (Terror, tribunal, cabecera de la cama sobre el cuello); Revisión posterior (SE V) confirmó: las inscripciones de *Fliegende Blätter* (VI-I), la palabra vulgar aprendida de Philipp en el sueño de los picos de pájaro, que las tres regresiones son un párrafo de 1914, los sueños punitorios agregado de 1919, Silberer agregado posterior (1909 su publicación), y que la frase «guardianes del dormir» es del cap. V, C; Lacan y «la otra escena» (≈). Fechner en *Más allá* (principio de tendencia a la estabilidad) sí está confirmado.
 - Ortografía: «inconsciente» en la prosa; «inconciente» sólo en citas de Amorrortu y en el título *Lo inconciente*.
