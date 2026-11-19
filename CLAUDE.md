@@ -13,7 +13,7 @@ Terminology follows Amorrortu/Etcheverry (pulsiÃ³n, investidura, sepultamientoâ€
 ## Commands (run from the repo root)
 
 ```bash
-python3 -I doc/tools/figs_preview.py     # all 32 diagrams in final state -> doc/tools/out/figs_N.html (6 per page; no dark-mode arg here)
+python3 -I doc/tools/figs_preview.py     # all 33 diagrams in final state -> doc/tools/out/figs_N.html (6 per page; no dark-mode arg here)
 google-chrome --headless=new --no-sandbox --hide-scrollbars --window-size=1360,1560 \
   --virtual-time-budget=3000 --screenshot=doc/tools/out/figs_0.png "file://$PWD/doc/tools/out/figs_0.html"
 node doc/tools/cdp.mjs "file://$PWD/index.html" doc/tools/out/shot 1400 900 "b10:4200" "b13:2600"   # desktop

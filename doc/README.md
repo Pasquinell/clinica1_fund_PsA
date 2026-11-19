@@ -59,6 +59,12 @@ Orden exacto de la tabla de la cátedra (23 bloques, ids `b1`…`b23`):
 - `r4` Repaso del Tema 3 (ahora al final, `data-year="1917"`), `r5` Repaso integral.
 - En el índice, `data-tema` de los bloques del Parcial 2 es la época, no el tema. Cada encabezado de época dice a qué tema del programa pertenece cada bloque. `#como-usar`, `#mapa` y `#vaivien` siguen describiendo el orden del programa y avisan que el Parcial 2 se lee cronológicamente.
 - `b13` ampliado (nov. 2026): en `.lectura`, «Por qué cambia la pregunta», el sueño del niño que arde con la lectura de Freud en tres pasos, Fechner en VII-B, y los dos inconscientes en VII-F. Se agregaron una «Nota · quién era Fechner» y una Anticipación (Fechner en 1920, Lacan y «la otra escena»).
+- Diagramas del Parcial 2 ampliados (nov. 2026), a partir de la «Primera lectura» de cada bloque:
+  - `b11`: productos de la condensación (Irma, R./tío José, Autodidasker), seis cadenas de la botánica con resto diurno e infancia, desplazamiento con el ejemplo de la botánica y la censura (*is fecit cui profuit*), seis medios de figuración y esquema de compromiso. La tarjeta de la botánica nombra ahora a Königstein, Gärtner, la vidriera y el libro de láminas.
+  - `b13`: scrolly nuevo «Figurabilidad y elaboración secundaria» (VI D e I: Silberer, Heine, Maury), entre los recuadros D/I y el caso del niño que arde. El peine pasa a 7 pasos (empresario/capitalista y guardián del dormir; rótulos de VII-F y del niño que arde). La vivencia de satisfacción pasa a 6 pasos (principio de displacer; el Prec llega tarde).
+  - `b14`: escala huida/represión/juicio, condición económica, retoños que pasan desfigurados y éxito o fracaso respecto del afecto en cada neurosis.
+  - `b16`: el primer scrolly pasa a 6 pasos (contrainvestidura y presentación metapsicológica; comercio entre sistemas con dos censuras). El segundo suma el hecho clínico «oído no es vivenciado», Tausk y los comedones.
+  - `b15`: angustia/miedo/terror, las tres fuentes de la angustia neurótica, «moneda corriente» y el yo que huye de su libido.
 - Mapa conceptual del Parcial 2: `#mapa2`, después de `r5`. Scrolly de 8 pasos (svg `.cmap`, viewBox 640×480, 13 nodos `.cm-n` con `data-k`/`data-n` vecinos/`data-l` bloques/`data-d` descripción; aristas `.cm-e` con `data-a`/`data-b`). En el último paso, clic o Enter sobre un nodo resalta sus conexiones y llena `.cmap-info` (oculto en móvil). Debajo, `details.fold` con el mapa en texto y tres recorridos de parcial. El JS va en un `<script>` propio al final del `<body>`.
 
 **Fuera de parciales** (`data-parcial="3"`, color `--p3`; divisor `#fuera` y encabezado `#tema4b`)
@@ -94,7 +100,7 @@ Complementos agregados en nov. 2026 (no reemplazan nada):
 - **Preguntas integradoras** dentro de los repasos: `r2` (Tema 1), `r3` (Parcial 1), `r4` (Tema 3), `r5` (Parcial 2), `hilos` (fuera de parciales).
 - **Glosario** final basado en Laplanche y Pontalis. El PDF disponible es solo una muestra (pp. 23-44, entradas A): las entradas cotejadas con ella llevan ⚑; el resto (≈) son paráfrasis según el *Diccionario*, no cotejadas con el texto.
 
-Cifras: 23 bloques, 32 diagramas con scroll, 23 preguntas, ~20 anticipaciones, ~15 recontextualizaciones.
+Cifras: 23 bloques, 33 diagramas con scroll, 23 preguntas, ~20 anticipaciones, ~15 recontextualizaciones.
 
 ## 5. Decisiones de contenido y correcciones al material de entrada
 
@@ -110,7 +116,7 @@ Correcciones verificadas contra la estructura de los textos o con búsqueda web:
   - 25ª: «la libido de las mociones pulsionales reprimidas se muda en angustia» **no está** en Amorrortu; la tarjeta usa ahora «el destino más inmediato de ese afecto es el de ser mudado en angustia…». «Esta angustia es, entonces, la moneda corriente por la cual se cambian o pueden cambiarse todas las mociones afectivas cuando el correspondiente contenido de representación ha sido sometido a represión». Nacimiento: «el acto del nacimiento es la fuente y el modelo del afecto de angustia». Las paráfrasis de esas frases en el texto pasaron de ⚑ a ≈.
   - `b14`: «…su esencia consiste en rechazar algo de la conciencia y mantenerlo alejado de ella» y «No tenemos que imaginarnos el proceso de la represión como un acontecer que se consumaría de una sola vez […]. No, sino que la represión exige un gasto de fuerza constante».
   - `b16`: «Resumamos: ausencia de contradicción, proceso primario…» (no «Exención mutua»). La cita «El psicoanálisis no puede situar la esencia de lo psíquico en la conciencia…» es de *El yo y el ello* (1923), no de *Lo inconciente*: pasó a ≈.
-  - `b12`: «Ha ocurrido, pues, un olvido motivado; una represión» no está en el texto; se reemplazó por «Por tanto, yo quise olvidar algo, había reprimido algo».
+  - `b12`: «Ha ocurrido, pues, un olvido motivado; una represión» no está en el texto; se reemplazó por «Por tanto, yo quise olvidar algo, había reprimido algo». El diagrama de Signorelli (paso 5) se corrigió recién en nov. 2026; ahora cita «yo quise olvidar algo, había reprimido algo».
   - Las paráfrasis sin comillas marcadas ⚑ que no se cotejaron pasaron a ≈.
   - No se cotejaron las citas de *La interpretación de los sueños* (`b11`, `b13` y las 48 respuestas de `#po-ids-a`/`#po-ids-b`; faltan los t. IV y V), ni las de Parcial 1 y «Fuera de parciales».
 
@@ -163,7 +169,7 @@ Todo inline en `index.html`.
 ```
 - Un `IntersectionObserver` por scrolly activa el paso que cruza la franja central de la pantalla (en móvil, la franja inferior). Todo elemento del SVG con `data-s ≤ paso activo` recibe la clase `.on`.
 - Clases útiles: `.up` (sube al aparecer), `.draw` + `pathLength="1"` (trazo animado), `.pulse`.
-- **Regla:** el `data-s` máximo de un diagrama no puede superar la cantidad de `.step` del scrolly (si no, hay capas que nunca aparecen). Al cerrar la sesión: 32 scrollies, 0 desajustes.
+- **Regla:** el `data-s` máximo de un diagrama no puede superar la cantidad de `.step` del scrolly (si no, hay capas que nunca aparecen). Hoy (`check.py`): 34 scrollies (33 con diagrama), 0 desajustes.
 - Vocabulario SVG: cajas `.box .boxs .bt .bo .bc .bp .bb`; líneas `.ln .lnd .lo .lt .lc .lp .lb`; texto `.ti .sm .xs .ser`; flechas `marker-end="url(#ar|#aro|#art|#arc|#arp|#arb)"` (definidas una sola vez al inicio del `<body>`).
 
 **Barra de tiempo (header):** cada sección con `data-title` (y opcionalmente `data-year`, `data-parcial`) actualiza el año, mueve el punto en la regla 1890-1935, deja un «fantasma» en la posición anterior y muestra «↩ retrocede N años» / «→ avanza N años». El rótulo del año sale del primer `.chip.yr` de la sección.
