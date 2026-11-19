@@ -85,7 +85,11 @@ Complementos agregados en nov. 2026 (no reemplazan nada):
 
 - Al inicio de cada bloque, después del encabezado: `.lectura` con **Primera lectura** (resumen narrativo del texto, con sus ejemplos y hallazgos), `.nucleo` (**el texto en un párrafo**: qué introduce y cómo se relaciona) e `.ideas` (bullets).
 - Al final de cada bloque: `.desarrollo` con 3-4 **preguntas de desarrollo** (`details.preg.dev`) y respuesta ideal de parcial; el último párrafo (`p.clave`) dice qué evalúa la pregunta y el error típico.
-- `b11` y `b13`: `.desarrollo.guia` con las 48 preguntas de la **guía de lectura de la cátedra** sobre *La interpretación de los sueños* respondidas (1-11 en `b11`, 12-48 en `b13`).
+- **Preguntas de orientación** (`#orientacion`, nov. 2026): sección después de `#mapa2`, última del Parcial 2 (`data-tema="Repaso"`). Una guía por texto del parcial, en orden cronológico, 150 `details.preg.dev`:
+  - **Guías oficiales de la cátedra** (`fuentes/preguntas-oficiales-de-orientacion/`), respondidas en el orden de cada guía: *La interpretación de los sueños* 1-11 (`#po-ids-a`) y 12-48 (`#po-ids-b`), Conf. 17 (`#po-c17`, 9), 18 (`#po-c18`, 11), 19 (`#po-c19`, 13), 23 (`#po-c23`, 15) y 25 (`#po-c25`, 13). Las 48 de IdS estaban antes en `b11` y `b13`; se movieron y en su lugar quedó una `call nota` con enlace (después se corrigió en ellas una cita de la 17ª; ver § 5).
+  - **Guías del sitio** (no oficiales; el `h4` dice «guía del sitio») para los textos sin guía de la cátedra: *Psicopatología* I-II (`#po-psico`, 9), *La represión* (`#po-rep`, 10), *Lo inconciente* (`#po-icc`, 10) y Conf. 7, 9, 11 y 14 (`#po-c7`, 12). No repiten las preguntas de desarrollo de `b12`, `b14`, `b16` y `cs`.
+  - Cada guía es un `.desarrollo.guia` con `p.po-obj` (objetivo), `h5.po-sub` (apartados) y `p.clave` solo en la pregunta de integración. Arriba, `nav.po-idx` con enlaces a cada guía.
+  - Cotejo: Conf. 17-18 y las cuatro guías del sitio, contra Amorrortu (t. VI, XIV, XV y XVI, PDF de psicopsi.com, no incluidos en el repo); Conf. 19 y 23, contra el texto alemán; Conf. 25, contra fuentes secundarias y puntos sueltos del t. XVI. Las citas cotejadas palabra por palabra llevan ⚑; lo no cotejado, ≈.
 - **Preguntas integradoras** dentro de los repasos: `r2` (Tema 1), `r3` (Parcial 1), `r4` (Tema 3), `r5` (Parcial 2), `hilos` (fuera de parciales).
 - **Glosario** final basado en Laplanche y Pontalis. El PDF disponible es solo una muestra (pp. 23-44, entradas A): las entradas cotejadas con ella llevan ⚑; el resto (≈) son paráfrasis según el *Diccionario*, no cotejadas con el texto.
 
@@ -94,6 +98,20 @@ Cifras: 23 bloques, 32 diagramas con scroll, 23 preguntas, ~20 anticipaciones, ~
 ## 5. Decisiones de contenido y correcciones al material de entrada
 
 Correcciones verificadas contra la estructura de los textos o con búsqueda web:
+
+- La definición «el propósito a que sirve, y su ubicación dentro de una serie psíquica» es de la **3ª conferencia** (actos fallidos, t. XV), no de la 17ª, que no forma parte de la bibliografía del parcial. Se quitó de `b10`, `r4`, `#mapa2` y las respuestas de la 17ª. En su lugar se usan las fórmulas de las propias conferencias, cotejadas en el t. XVI: el síntoma «es rico en sentido y se entrama con el vivenciar del enfermo» y «poseen un sentido, lo mismo que las operaciones fallidas y los sueños, y […] están en vinculación íntima con el vivenciar del paciente» (17ª); el «desde dónde» y el «hacia dónde» o «para qué» del síntoma (18ª, ahora la cita ⚑ de `b10`). La pregunta 3 de `r4` usa la fórmula de la 18ª.
+- `b15`, paso 4: se quitó «como el vino en vinagre» (texto y rótulo del diagrama). No aparece en el texto de la 25ª.
+- `cs`: el sueño del beso del tío en el automóvil («autoerotismo») es de la **15ª** conferencia, no de la 7ª. Se reemplazó por el ejemplo del «canal» y el Paso de Calais (7ª, ej. b).
+- `b16`: la cita es «en alto grado lagunosos» (sin «muy»).
+- **Cotejo de citas ⚑ contra Amorrortu (nov. 2026)**, con los t. VI, XIV, XV y XVI en PDF (psicopsi.com, no incluidos en el repo). Varias citas ⚑ venían de otra traducción y se reemplazaron por el texto de Amorrortu:
+  - 19ª: la imagen es «un gran **vestíbulo** donde las mociones anímicas pululan como individuos», no «antesala». Se cambió «antesala» por «vestíbulo» en todo lo que se refiere a la 19ª (texto, diagrama de `b10`, repasos y respuestas). Coincide con el término de la guía de la cátedra.
+  - 23ª: «Ya sabemos que los síntomas neuróticos son el resultado de un conflicto que se libra en torno de una nueva modalidad de la satisfacción pulsional. Las dos fuerzas que se han enemistado vuelven a coincidir en el síntoma; se reconcilian, por así decir, gracias al compromiso de la formación de síntoma». La de la fantasía como reserva: «La creación del reino de la fantasía dentro del alma halla su cabal correspondiente en la institución de “parques naturales”, de “reservas”…».
+  - 25ª: «la libido de las mociones pulsionales reprimidas se muda en angustia» **no está** en Amorrortu; la tarjeta usa ahora «el destino más inmediato de ese afecto es el de ser mudado en angustia…». «Esta angustia es, entonces, la moneda corriente por la cual se cambian o pueden cambiarse todas las mociones afectivas cuando el correspondiente contenido de representación ha sido sometido a represión». Nacimiento: «el acto del nacimiento es la fuente y el modelo del afecto de angustia». Las paráfrasis de esas frases en el texto pasaron de ⚑ a ≈.
+  - `b14`: «…su esencia consiste en rechazar algo de la conciencia y mantenerlo alejado de ella» y «No tenemos que imaginarnos el proceso de la represión como un acontecer que se consumaría de una sola vez […]. No, sino que la represión exige un gasto de fuerza constante».
+  - `b16`: «Resumamos: ausencia de contradicción, proceso primario…» (no «Exención mutua»). La cita «El psicoanálisis no puede situar la esencia de lo psíquico en la conciencia…» es de *El yo y el ello* (1923), no de *Lo inconciente*: pasó a ≈.
+  - `b12`: «Ha ocurrido, pues, un olvido motivado; una represión» no está en el texto; se reemplazó por «Por tanto, yo quise olvidar algo, había reprimido algo».
+  - Las paráfrasis sin comillas marcadas ⚑ que no se cotejaron pasaron a ≈.
+  - No se cotejaron las citas de *La interpretación de los sueños* (`b11`, `b13` y las 48 respuestas de `#po-ids-a`/`#po-ids-b`; faltan los t. IV y V), ni las de Parcial 1 y «Fuera de parciales».
 
 - *La interpretación de los sueños*, cap. VI: **C = «Los medios de figuración»**, **D = «El miramiento por la figurabilidad»**, I = elaboración secundaria. La guía confundía C y D.
 - Fórmula de la masa («un objeto, uno y el mismo, en el lugar de su ideal del yo») está en el **cap. VIII** de *Psicología de las masas*, no en el VII.
